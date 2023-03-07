@@ -1,6 +1,6 @@
 var exec = require('cordova/exec');
 
-var async = cordova.require('cordova-plugin-photo-library.async');
+var async = cordova.require('cordova-plugin-photo-library-wkwebview-ionic.async');
 
 var defaultThumbnailWidth = 512; // optimal for android
 var defaultThumbnailHeight = 384; // optimal for android
@@ -82,19 +82,6 @@ photoLibrary.getAlbums = function (success, error) {
     error,
     'PhotoLibrary',
     'getAlbums', []
-  );
-
-};
-
-photoLibrary.getPhotosFromAlbum = function (albumTitle, success, error) {
-
-  cordova.exec(
-    function (result) {
-      success(result);
-    },
-    error,
-    'PhotoLibrary',
-    'getPhotosFromAlbum', [albumTitle]
   );
 
 };
