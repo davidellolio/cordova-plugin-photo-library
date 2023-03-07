@@ -1,4 +1,3 @@
-cordova.define("cordova-plugin-photo-library.PhotoLibrary", function(require, exports, module) {
 var exec = require('cordova/exec');
 
 // var async = cordova.require('cordova-plugin-photo-library-wkwebview-ionic.async');
@@ -399,5 +398,3 @@ function fixedEncodeURIComponent(str) {
     return '%' + c.charCodeAt(0).toString(16);
   });
 }
-
-});
