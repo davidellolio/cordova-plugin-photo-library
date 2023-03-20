@@ -629,7 +629,8 @@ public class PhotoLibraryService {
 
     } else {
 
-      String extension = url.contains(".") ? url.substring(url.lastIndexOf(".")) : "";
+      String extension = url.contains("mp4") ? ".mp4" : url.contains(".") ? url.substring(url.lastIndexOf(".")) : "";
+
       targetFile = getImageFileName(albumDirectory, extension);
 
       InputStream is;
